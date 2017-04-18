@@ -1,0 +1,166 @@
+
+*{
+    outline: none!important;
+}
+@font-face {
+    font-family: fontawesome;
+    src: url(../fonts/fontawesome-webfont.ttf); /* Путь к файлу со шрифтом */
+}
+
+
+p {
+    color: red;
+}
+body{
+    background-color: lightblue;
+}
+main {
+    width:650px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 8px rgba(0,0,0,0.6);
+    border-radius: 10px;margin-top: 50px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+h1 {
+    text-align: center;
+    font-weight: 400;
+    color: rgb(82, 0, 0);
+    font-size: 48px;
+    margin: 20px;
+    border-style: d;
+}
+#addTask input{
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30px;
+    padding: 5px 5px 3px 80px;
+    border: none;
+    border-bottom: 1px ridge;
+}
+ul{
+    list-style:none;
+    padding: 0;
+}
+li{
+    position: relative;
+    padding: 5px 10px;
+    padding-left: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.32);
+    height: 40px;
+
+}
+li span{
+    position: absolute;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 6px;
+}
+li .delete:before{
+    display: block;
+    font-family: fontawesome;
+    content: '\f00d';
+    font-size: 26px;
+    cursor: pointer;
+    color: rgba(113, 43, 43, 0.68);
+}
+li .delete{
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+}
+input[type='checkbox']{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 3px;
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+}
+input[type='checkbox']:after {
+    cursor: pointer;
+    font-family: fontawesome;
+    display: block;
+    position: absolute;
+    content: '\f10c ';
+    right: 0;
+    bottom: 0;
+    left: 3px;
+    top: 0;
+    /* width: 20px; */
+    font-size: 40px;
+    /* height: 20px; */
+    font-weight: 100;
+    color: #8c9fcc;
+}
+input[type='checkbox']:checked:after {
+    content: '\f192 ';
+    color: rgba(25, 204, 6, 0.6);
+}
+input[type='checkbox']:checked + span {
+    color: rgba(153, 153, 153, 0.54);
+    text-decoration: line-through;
+}
+#changeTask{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100vw;
+    height: 100vh;
+}
+#changeTask form{
+    width: 400px;
+    height: 200px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 13px rgba(255,255,255,0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+#changeTask form textarea{
+    resize: none;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 5px;
+}
+.send{
+    font-size: 18px;
+    border: none;
+    color: black;
+    background: #47d09d;
+    border-radius: 5px;
+    padding: 4px 21px;
+}
+.back{
+    font-size: 18px;
+    border: none;
+    color: white;
+    background: rgba(193, 0, 0, 0.76);
+    border-radius: 5px;
+    padding: 4px 21px;
+}
+.categorys{
+    text-align: center;
+}
+.categorys a{
+    display: inline-block;
+    font-size: 20px;
+    margin: 0px 10px;
+    cursor: pointer;
+    padding: 7px 10px;
+}
