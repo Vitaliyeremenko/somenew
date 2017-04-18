@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main>
+    <h1>Cписок задач</h1>
+    <form action="" id="addTask">
+        <input type="text" placeholder="Your new task">
+        <!--<input type="submit" value="Add task">-->
+    </form>
+    <div class="tasks">
+        <script type="text/template" id="taskTemplate">
+            <input type="checkbox" class="toogle">  <span><%= title %></span>   <button class="delete"></button>
+        </script>
+    </div>
+    <div class="categorys">
+        <a class="all">All</a><a  class="active">Active</a><a class="completed">Complited</a>
+    </div>
+    <div id="changeTask">
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <button class="send">Send</button>
+            <button class="back">Back</button>
+        </form>
+    </div>
+</main>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/underscore/underscore-min.js"></script>
+    <script src="node_modules/backbone/backbone-min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
